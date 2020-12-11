@@ -6,8 +6,8 @@ const clamp = (min: number, max: number, val: number): number =>
 
 class AnimationController extends Listenable {
   private _duration: number
-  private lowerBound: number = lowerBound
-  private upperBound: number = upperBound
+  private _lowerBound: number = lowerBound
+  private _upperBound: number = upperBound
   private _status: AnimationStatus = AnimationStatus.dismissed
   private _value: number = 0
   constructor({ duration }: { duration: number }) {
@@ -45,8 +45,8 @@ class AnimationController extends Listenable {
       const spendTime = current - startTime /// 花费的毫秒数
       this._value = this.linear(
         clamp(0, this._duration, spendTime),
-        this.lowerBound,
-        this.upperBound - this.lowerBound,
+        this._lowerBound,
+        this._upperBound - this._lowerBound,
         this._duration
       )
       this.notifyListeners()
