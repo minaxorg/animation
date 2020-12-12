@@ -1,6 +1,6 @@
 {
   "name": "@minax/animation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/animation.cjs.js",
   "module": "dist/animation.esm.js",
