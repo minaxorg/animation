@@ -23,6 +23,7 @@ function App() {
       }}
     >
       <select
+        style={{ width: 302 }}
         onChange={(e) => {
           if (controller.current !== null) {
             controller.current.reset()
@@ -58,7 +59,6 @@ function App() {
             }, 100)
           }
         }}
-        style={{ marginBottom: 16 }}
       >
         <option value="-1">--Please choose an option--</option>
         {Object.values(EasingFunctions)
@@ -72,7 +72,7 @@ function App() {
           })}
       </select>
       <canvas
-        style={{ border: '1px solid #c0d3c7' }}
+        style={{ border: '1px solid #c0d3c7', marginTop: 16 }}
         width={300}
         height={300}
         ref={canvasRef}
