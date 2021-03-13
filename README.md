@@ -5,6 +5,10 @@
 npm i --save @minax/animation
 ```
 
+## Demo
+
+[https://minaxorg.github.io/animation/](https://minaxorg.github.io/animation/)
+
 ## Usage
 
 ``` typescript
